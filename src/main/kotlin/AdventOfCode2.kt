@@ -1,27 +1,24 @@
-import java.io.File
-
-private fun readTxtFile(filename: String): MutableList<List<String>> {
-    val file: MutableList<List<String>> = mutableListOf(mutableListOf())
-    File(filename).forEachLine { file.add(it.split(" ")) }
-    return file.subList(1,file.size)
+private fun readTxtFile(filename: String): List<List<String>> {
+    var resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()
+    return resource!!.map { it.split(" ") }
 
     //How to do it more efficiently? Split and 2D list
 }
 
 private fun main() {
-    val file = readTxtFile("/Users/dogron/IdeaProjects/AvdentOfCode/src/main/resources/Advent of Code (task 2).txt")
+    val modInput = readTxtFile("Advent of Code (task 2).txt")
 
-    part1(file)
-    part2(file)
+    part1(modInput)
+    part2(modInput)
 }
 
-private fun part1(file: MutableList<List<String>>) {
+private fun part1(modInput: List<List<String>>) {
     var totalScore = 0
     val rulesVictory = mapOf("X" to "C", "Y" to "A", "Z" to "B")
     val corresponding = mapOf("A" to "X", "B" to "Y", "C" to "Z")
     val rulesPoints = mapOf("X" to 1, "Y" to 2, "Z" to 3)
 
-    file.forEach {
+    modInput.forEach {
         var currentScore = rulesPoints[it[1]]
         if (corresponding[it[0]] == it[1]) {
             currentScore = currentScore!! + 3
@@ -35,13 +32,13 @@ private fun part1(file: MutableList<List<String>>) {
     println("Part 1 answer: $totalScore")
 }
 
-private fun part2(file: MutableList<List<String>>) {
+private fun part2(modInput: List<List<String>>) {
     var totalScore = 0
     val rulesVictory = mapOf("A" to "B", "B" to "C", "C" to "A")
     val rulesDefeat = mapOf("B" to "A", "C" to "B", "A" to "C")
     val rulesPoints = mapOf("A" to 1, "B" to 2, "C" to 3)
 
-    file.forEach {
+    modInput.forEach {
         if (it[1] == "X") {
             totalScore += rulesPoints[rulesDefeat[it[0]]]!!
         }

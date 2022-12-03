@@ -1,17 +1,13 @@
-import java.io.File
-
 private fun readTxtFile(filename: String): List<String> {
-    val file: MutableList<String> = mutableListOf()
-    File(filename).forEachLine {file.add(it)}
-    return file
+    return object {}.javaClass.getResourceAsStream(filename)!!.bufferedReader().readLines()
 }
 private fun main() {
-    val file = readTxtFile("/Users/dogron/IdeaProjects/AvdentOfCode/src/main/resources/Advent of Code (task 1).txt")
+    val modInput = readTxtFile("Advent of Code (task 1).txt")
     //How to make it automatically seek in the resource folder?
     var totalCalories = mutableListOf<Int>()
     var currentCalories = 0
 
-    file.forEach {
+    modInput.forEach {
         if (it == "") {
             totalCalories.add(currentCalories)
             currentCalories = 0
