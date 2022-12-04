@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="">
+    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Fix: Advent of Code3.kt empty no more!">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode04.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 4) test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 4).txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Advent of Code3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Advent of Code3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 1) test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 1) test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 1).txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 1).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 2) test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 2) test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 2).txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 2).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 3) test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 3) test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 3).txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 3).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Advent of Code3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode03.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode01.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode02.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/dogron/IdeaProjects/AvdentOfCode/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dogron/IdeaProjects/AvdentOfCode/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
@@ -72,11 +70,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670022276330</updated>
-      <workItem from="1670022277835" duration="15538000" />
+      <workItem from="1670022277835" duration="15763000" />
+      <workItem from="1670073825458" duration="2730000" />
+      <workItem from="1670176959438" duration="2964000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix: Advent of Code3.kt empty no more!">
+      <created>1670073566405</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670073566405</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix: Advent of Code3.kt empty no more!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Advent of Code3.kt empty no more!" />
   </component>
 </project>
