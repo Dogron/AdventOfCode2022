@@ -1,70 +1,33 @@
 private fun readCratesTable(filename: String): List<List<String>> {
-    var resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()
-    var i = 0
-    resource!!.forEachIndexed { index, s ->
-        if (s == "") {
-            i = index
-            //How to break?
-        }
-    }
-    val amountofstacks = resource[i-1][resource[i-1].length-1].digitToInt()
-    resource = resource.subList(0,i-1)
-
-    val resource2 = resource.map {
-        it.chunked(4)
+    val resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()!!
+    val separatorIndex = resource.indexOf("")
+    val columns = resource[separatorIndex - 1].split(" ").last().toInt()
+    val sliced = resource.take(separatorIndex - 1).map { it.chunked(4) }
+    val modInput = MutableList(size = columns) {
+        MutableList(size = 0) { "" }
     }
 
-    var modInput = MutableList(size = amountofstacks) {
-        MutableList(size = 0) {
-            ""
-        }
-    }
-
-    resource2.forEach {
-            it.forEachIndexed { index, s ->
-                val s0 = s.trim()
-                if(s0.isNotEmpty()) {
-                    modInput[index].add(s0.replace(("[^\\w\\d ]").toRegex(), ""))
-                }
+    sliced.forEach {
+        it.forEachIndexed { index, s ->
+            val cell = s.trim().removeSurrounding("[", "]")
+            if (cell.isNotEmpty()) {
+                modInput[index].add(cell)
             }
+        }
     }
 
-    modInput = modInput.map {
-        it.reversed().toMutableList()
-    }.toMutableList()
-
-    return modInput
+    return modInput.map { it.reversed() }
 }
 
 private fun readCommands(filename: String): List<List<Int>> {
-    var resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()
-    var i = 0
-    resource!!.forEachIndexed { index, s ->
-        if (s == "") {
-            i = index
-            //How to break?
-        }
-    }
+    val resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()!!
+    val separatorIndex = resource.indexOf("")
 
-    resource = resource.subList(i+1,resource.size)
-    val resource2 = resource.map {
-        it.split("\\s+".toRegex())
-    }
-    val modInput = MutableList(size = resource2.size) {
-        mutableListOf<Int>()
-    }
-    resource2.forEachIndexed { index, strings ->
-        strings.forEach {
-            if(it.matches("-?\\d+(\\.\\d+)?".toRegex()) ) {
-                modInput[index].add(it.toInt())
-            }
-        }
-    }
-    return modInput
+    return resource.drop(separatorIndex + 1).map { it.split(" ").mapNotNull { it.toIntOrNull() } }
 }
 
 
-private fun main(){
+private fun main() {
     val filename = "Advent of Code (task 05).txt"
     val modInput = readCratesTable(filename)
     val commands = readCommands(filename)
@@ -83,13 +46,10 @@ private fun part1solution(
 ): String {
     val modInput = input.map { it.toMutableList() }
     commands.forEach { command ->
-        var i = 0
-        while (i < command[0]) {
+        repeat(command[0]) {
             val item = modInput[command[1] - 1].last()
             modInput[command[1] - 1].removeLast()
             modInput[command[2] - 1].add(item)
-
-            i++
         }
     }
 
@@ -103,9 +63,9 @@ private fun part2solution(
     val modInput = input.map { it.toMutableList() }
     commands.forEach { command ->
         val size = modInput[command[1] - 1].size
-        val items = modInput[command[1] - 1].subList(size-command[0], size)
-        modInput[command[2]-1].addAll(items)
-        repeat(command[0]) {modInput[command[1] - 1].removeLast()}
+        val items = modInput[command[1] - 1].subList(size - command[0], size)
+        modInput[command[2] - 1].addAll(items)
+        repeat(command[0]) { modInput[command[1] - 1].removeLast() }
     }
 
     return modInput.joinToString("") { it.last() }
