@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Task 5 completed">
+    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Cleanup task 5 code">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode06.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 06) test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 06).txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode05.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode05.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -68,7 +71,7 @@
       <workItem from="1670022277835" duration="15763000" />
       <workItem from="1670073825458" duration="2730000" />
       <workItem from="1670176959438" duration="4541000" />
-      <workItem from="1670237756941" duration="10262000" />
+      <workItem from="1670237756941" duration="12166000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: Advent of Code3.kt empty no more!">
       <created>1670073566405</created>
@@ -98,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670344353312</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Cleanup task 5 code">
+      <created>1670345874029</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670345874029</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +132,7 @@
     <MESSAGE value="Task 4 completed" />
     <MESSAGE value="Changed namings of the input files, task 5 files added" />
     <MESSAGE value="Task 5 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 5 completed" />
+    <MESSAGE value="Cleanup task 5 code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup task 5 code" />
   </component>
 </project>
