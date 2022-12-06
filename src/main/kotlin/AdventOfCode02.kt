@@ -6,7 +6,7 @@ private fun readTxtFile(filename: String): List<List<String>> {
 }
 
 private fun main() {
-    val modInput = readTxtFile("Advent of Code (task 2).txt")
+    val modInput = readTxtFile("Advent of Code (task 02).txt")
 
     part1(modInput)
     part2(modInput)

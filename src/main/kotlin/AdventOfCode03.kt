@@ -22,8 +22,8 @@ private fun readtxtfilePart2(filename: String): List<List<String>> {
     //How to do it more efficiently? Split and 2D list
 }
 private fun main() {
-    val modInputPart1 = readtxtfilePart1("Advent of Code (task 3).txt") //Modified Input for use in the program
-    val modInputPart2 = readtxtfilePart2("Advent of Code (task 3).txt")
+    val modInputPart1 = readtxtfilePart1("Advent of Code (task 03).txt") //Modified Input for use in the program
+    val modInputPart2 = readtxtfilePart2("Advent of Code (task 03).txt")
 
     val itemsPart1 = find_common_items_part1(modInputPart1)
     println(sum_char(itemsPart1))

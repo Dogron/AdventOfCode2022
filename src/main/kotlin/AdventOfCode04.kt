@@ -12,7 +12,7 @@ private fun readtxtfilePart1(filename: String): List<List<List<Int>>> {
 }
 
 private fun main() {
-    val modInput = readtxtfilePart1("Advent of Code (task 4).txt")
+    val modInput = readtxtfilePart1("Advent of Code (task 04).txt")
     var answer = 0
     println(modInput)
 
