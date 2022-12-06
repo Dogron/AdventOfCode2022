@@ -1,4 +1,4 @@
-private fun readtxtfilePart1(filename: String): List<List<List<Int>>> {
+private fun readCratesTable(filename: String): List<List<List<Int>>> {
     var resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()
     var modInput = resource!!.map { it0 ->
         it0.split(",").map { it1 ->
@@ -12,7 +12,7 @@ private fun readtxtfilePart1(filename: String): List<List<List<Int>>> {
 }
 
 private fun main() {
-    val modInput = readtxtfilePart1("Advent of Code (task 04).txt")
+    val modInput = readCratesTable("Advent of Code (task 04).txt")
     var answer = 0
     println(modInput)
 

@@ -1,4 +1,4 @@
-private fun readtxtfilePart1(filename: String): List<List<String>> {
+private fun readCratesTable(filename: String): List<List<String>> {
     var resource = object {}.javaClass.getResourceAsStream(filename)?.bufferedReader()?.readLines()
     var modInput = resource!!.map {
         listOf(it.substring(0, it.length / 2), it.substring(it.length / 2))
@@ -22,7 +22,7 @@ private fun readtxtfilePart2(filename: String): List<List<String>> {
     //How to do it more efficiently? Split and 2D list
 }
 private fun main() {
-    val modInputPart1 = readtxtfilePart1("Advent of Code (task 03).txt") //Modified Input for use in the program
+    val modInputPart1 = readCratesTable("Advent of Code (task 03).txt") //Modified Input for use in the program
     val modInputPart2 = readtxtfilePart2("Advent of Code (task 03).txt")
 
     val itemsPart1 = find_common_items_part1(modInputPart1)
