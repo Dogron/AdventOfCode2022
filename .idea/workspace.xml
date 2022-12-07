@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Cleanup task 5 code">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode06.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 06) test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 06).txt" afterDir="false" />
+    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Task 6 completed">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode07.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 07) test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 07).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AvdentOfCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode06.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode06.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +63,21 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="AdventOfCode" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="AdventOfCode" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +89,7 @@
       <workItem from="1670022277835" duration="15763000" />
       <workItem from="1670073825458" duration="2730000" />
       <workItem from="1670176959438" duration="4541000" />
-      <workItem from="1670237756941" duration="12166000" />
+      <workItem from="1670237756941" duration="21355000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: Advent of Code3.kt empty no more!">
       <created>1670073566405</created>
@@ -108,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670345874029</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Task 6 completed">
+      <created>1670347475604</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670347475604</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +158,17 @@
     <MESSAGE value="Changed namings of the input files, task 5 files added" />
     <MESSAGE value="Task 5 completed" />
     <MESSAGE value="Cleanup task 5 code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup task 5 code" />
+    <MESSAGE value="Task 6 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 6 completed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="31" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
