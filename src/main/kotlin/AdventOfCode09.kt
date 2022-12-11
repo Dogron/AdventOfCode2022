@@ -7,12 +7,12 @@ private fun readInput(filename: String): List<List<String>> {
 private fun main() {
     val filename = "Advent of Code (task 09).txt"
     val modInput = readInput(filename)
-    part1solution(modInput)
-    part2solution(modInput)
+    solutionForXLength(modInput, 2)
+    solutionForXLength(modInput, 10)
 }
 
-private fun part1solution(modInput: List<List<String>>) {
-    var rope : MutableList<MutableList<Int>> = mutableListOf(mutableListOf(0,0),mutableListOf(0,0))
+private fun solutionForXLength(modInput: List<List<String>>, size: Int) {
+    var rope: MutableList<MutableList<Int>> = MutableList(size) { mutableListOf(0, 0) }
 
     var uniqueTailPositions = mutableSetOf<List<Int>>()
 
@@ -20,20 +20,23 @@ private fun part1solution(modInput: List<List<String>>) {
         var axis = 0
         var increment = 1
 
-        when(command[0]) {
-            "R"-> {
+        when (command[0]) {
+            "R" -> {
                 axis = 0
                 increment = 1
             }
-            "D"-> {
+
+            "D" -> {
                 axis = 1
                 increment = -1
             }
-            "L"-> {
+
+            "L" -> {
                 axis = 0
                 increment = -1
             }
-            "U"-> {
+
+            "U" -> {
                 axis = 1
                 increment = 1
             }
@@ -54,85 +57,28 @@ private fun part1solution(modInput: List<List<String>>) {
     println(uniqueTailPositions.size)
 }
 
-private fun part2solution(modInput: List<List<String>>) {
-    var rope : MutableList<MutableList<Int>> = mutableListOf(mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0),mutableListOf(0,0))
+private fun move(tail: List<Int>, head: List<Int>): List<Int> {
+    val dx = head[0] - tail[0]
+    val dy = head[1] - tail[1]
 
-    var uniqueTailPositions = mutableSetOf<List<Int>>()
-
-    modInput.forEach { command ->
-        var axis = 0
-        var increment = 1
-
-        when(command[0]) {
-            "R"-> {
-                axis = 0
-                increment = 1
-            }
-            "D"-> {
-                axis = 1
-                increment = -1
-            }
-            "L"-> {
-                axis = 0
-                increment = -1
-            }
-            "U"-> {
-                axis = 1
-                increment = 1
-            }
-        }
-
-        repeat(command[1].toInt()) {
-            rope[0][axis] += increment
-            for (i in 1 until rope.size) {
-                val move = move(rope[i], rope[i - 1])
-                rope[i][0] += move[0]
-                rope[i][1] += move[1]
-            }
-            uniqueTailPositions.add(listOf(rope[rope.size - 1][0], rope[rope.size - 1][1]))
-        }
+    return when {
+        dx == 2 && dy == 0 -> listOf(1, 0)
+        dx == 2 && dy == -1 -> listOf(1, -1)
+        dx == 2 && dy == -2 -> listOf(1, -1)
+        dx == 1 && dy == -2 -> listOf(1, -1)
+        dx == 0 && dy == -2 -> listOf(0, -1)
+        dx == -1 && dy == -2 -> listOf(-1, -1)
+        dx == -2 && dy == -2 -> listOf(-1, -1)
+        dx == -2 && dy == -1 -> listOf(-1, -1)
+        dx == -2 && dy == 0 -> listOf(-1, 0)
+        dx == -2 && dy == 1 -> listOf(-1, 1)
+        dx == -2 && dy == 2 -> listOf(-1, 1)
+        dx == -1 && dy == 2 -> listOf(-1, 1)
+        dx == 0 && dy == 2 -> listOf(0, 1)
+        dx == 1 && dy == 2 -> listOf(1, 1)
+        dx == 2 && dy == 2 -> listOf(1, 1)
+        dx == 2 && dy == 1 -> listOf(1, 1)
+        else -> listOf(0, 0)
     }
 
-    println(uniqueTailPositions)
-    println(uniqueTailPositions.size)
-}
-
-private fun move(tail: List<Int>,head: List<Int>): List<Int> {
-    val dx = head[0]-tail[0]
-    val dy = head[1]-tail[1]
-
-    if(dx == 2 && dy == 0)
-        return listOf(1,0)
-    if(dx == 2 && dy == -1)
-        return listOf(1,-1)
-    if (dx == 2 && dy == -2)
-        return listOf(1,-1)
-    if(dx == 1 && dy == -2)
-        return listOf(1,-1)
-    if(dx == 0 && dy == -2)
-        return listOf(0,-1)
-    if(dx == -1 && dy == -2)
-        return listOf(-1,-1)
-    if (dx == -2 && dy == -2)
-        return listOf(-1,-1)
-    if(dx == -2 && dy == -1)
-        return listOf(-1,-1)
-    if(dx == -2 && dy == 0)
-        return listOf(-1,0)
-    if(dx == -2 && dy == 1)
-        return listOf(-1,1)
-    if (dx == -2 && dy == 2)
-        return listOf(-1,1)
-    if(dx == -1 && dy == 2)
-        return listOf(-1,1)
-    if(dx == 0 && dy == 2)
-        return listOf(0,1)
-    if(dx == 1 && dy == 2)
-        return listOf(1,1)
-    if (dx == 2 && dy == 2)
-        return listOf(1,1)
-    if(dx == 2 && dy == 1)
-        return listOf(1,1)
-
-    return listOf(0,0)
 }

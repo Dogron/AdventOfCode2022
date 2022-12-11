@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Task 8 completed">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode09.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 09) test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Advent of Code (task 09).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="251926cf-a8e8-4a4b-b26d-9520f6ffc8f5" name="Changes" comment="Task 9 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode09.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/AdventOfCode09.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,9 @@
       <workItem from="1670176959438" duration="4541000" />
       <workItem from="1670237756941" duration="21355000" />
       <workItem from="1670454164530" duration="5476000" />
-      <workItem from="1670602440475" duration="5635000" />
+      <workItem from="1670602440475" duration="5722000" />
+      <workItem from="1670608188495" duration="2388000" />
+      <workItem from="1670763084965" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: Advent of Code3.kt empty no more!">
       <created>1670073566405</created>
@@ -134,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670523883415</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Task 9 completed">
+      <created>1670608164653</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670608164653</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +168,8 @@
     <MESSAGE value="Task 6 completed" />
     <MESSAGE value="Rename main file from &quot;AvdentOfCode&quot; (lol) to &quot;AdventOfCode&quot;" />
     <MESSAGE value="Task 8 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 8 completed" />
+    <MESSAGE value="Task 9 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 9 completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -171,11 +178,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="31" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/AdventOfCode09.kt</url>
-          <line>91</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
